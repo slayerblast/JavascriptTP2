@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>todo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <script type="module" src="gestion-depenses.js" defer></script>
+    <script type="module" src="add.js" defer></script>
 </head>
 <body>
-    
+    <div class="container">
+        <header class="row">
+            <h1 class="col-12 text-center">Total <span class="js-compteur badge bg-dark"></span></h1>
+        </header>
+        <section class="row">
+            <div class="col-6">Dépenses: <span class="js-compteur-D"></span></div>
+            <div class="col-6">Recettes: <span class="js-compteur-R"></span></div>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Montant</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+              <!--affichage des données-->
+              </table>
+        </section>
+        <hr>
+        <section class="row">
+            <h2>Ajouter une Recette/Dépense</h2>
+            <form class="d-flex js-form-add">
+                <input type="text" name="nom" class="form-input form-control form-control-lg" style="flex-grow:1" placeholder="nom">
+                <input type="text" name="montant" class="form-input form-control form-control-lg" style="flex-grow:1" placeholder="montant">
+                <button class="btn btn-success ms-4">
+                    <i class="bi bi-plus-square"></i>
+                </button>
+            </form>
+        </section>
+    </div>
 </body>
 </html>
